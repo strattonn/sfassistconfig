@@ -2,14 +2,12 @@
   "version": 3,
   "api": {
     "method": "POST",
-      baseurl: "https://sfassist.com",
-      url: "/parseRules/",
-      headers: [
-        {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "x-api-key": "AdPsxUpMtgWA2qlJYwoZvtnd6q4jXzgL7IDj9w8QTfY260GO53GGNA==",
-        },
-    ]
+    "baseurl": "https://sfassist.com",
+    "url": "/parseRules/",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "x-api-key": "AdPsxUpMtgWA2qlJYwoZvtnd6q4jXzgL7IDj9w8QTfY260GO53GGNA=="
+    }
   }
 }
