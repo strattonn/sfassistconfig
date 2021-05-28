@@ -3,7 +3,7 @@
   "api": {
     "method": "POST",
       baseurl: "https://sfassist.com",
-      url: "/parseRules",
+      url: "/parseRules/",
       headers: [
         {
           Accept: "application/json",
