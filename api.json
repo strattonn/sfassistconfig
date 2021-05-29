@@ -4,7 +4,7 @@
   "serverVersion": false,
   "api": {
     "method": "POST",
-    "baseurl": "https://sfassist.com",
+    "baseUrl": "https://sfassist.com",
     "url": "/parseRules/",
     "headers": {
       "Accept": "application/json",
