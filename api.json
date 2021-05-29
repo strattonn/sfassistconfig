@@ -1,5 +1,7 @@
 {
   "version": 3,
+  "serverConfig": true,
+  "serverVersion": false,
   "api": {
     "method": "POST",
     "baseurl": "https://sfassist.com",
