@@ -4,8 +4,8 @@
   "serverVersion": false,
   "api": {
     "method": "POST",
-    "baseUrl": "https://sfassist.com",
-    "url": "/parseRules/",
+    "baseUrl": "http://sfassist.us-3.evennode.com",
+    "url": "/",
     "headers": {
       "Accept": "application/json",
       "Content-Type": "application/json",
