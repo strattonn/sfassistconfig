@@ -1,7 +1,8 @@
 {
   "version": 3,
   "serverConfig": true,
-  "serverVersion": false,
+  "configServerDead": false,
+  "rulesServerAlive": false,
   "api": {
     "method": "POST",
     "baseUrl": "http://sfassist.us-3.evennode.com",
