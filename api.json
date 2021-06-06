@@ -5,7 +5,7 @@
   "rulesServerAlive": false,
   "api": {
     "method": "POST",
-    "baseUrl": "http://sfassist.us-3.evennode.com",
+    "baseUrl": "https://prod.sfassist.com",
     "url": "/",
     "headers": {
       "Accept": "application/json",
