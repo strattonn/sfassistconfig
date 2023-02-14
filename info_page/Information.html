@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Information</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" id="vc_google_fonts_abelregular-css"
+        href="https://fonts.googleapis.com/css?family=Abel%3Aregular&amp;subset=latin&amp;ver=6.7" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="redux-google-fonts-salient_redux-css"
+        href="https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7COswald%3A700%2C400%2C600%7CLato%3A400&amp;display=swap&amp;ver=1669166919"
+        type="text/css" media="all">
+    <link rel="icon" href="images/Logo512-32x32.png" sizes="32x32">
+    <link rel="icon" href="images/Logo512-192x192.png" sizes="192x192" <link rel="apple-touch-icon"
+        href="images/Logo512-180x180.png">
+</head>
+
+<body>
+    <div class="container-wrap">
+        <div class="container">
+            <div class="heading-div" style="display:block;">
+                <img style=" width: 330px;height: 130px;margin-right: 60px;" src="images/LogoBeam330.png">
+                <h1 class="heading">SmartForm Assistant</h1>
+            </div>
+            <div>
+                <p>Welcome to the SmartForm Assistant beta! Here’s a little information about how to use it.</p>
+                <p>There are five tabs in the Assistant.</p>
+                <img class="image-wide" src="images/Tabs.png" alt="5 Tabs. Data Explorer, Rules, Events, Settings and Information">
+                <ol>
+                    <li>Data Explorer – This shows every property in the design of the form, view and controls.</li>
+                    <ol>
+                        <li>You can edit data labels and the changes are posted to the form. Being able to edit data
+                            label values at runtime is a significant time saver. Just make sure you refresh the data
+                            explorer to get the latest values before you update.</li>
+                        <li>Click on a blue smartObject, this will show you the contents of the SmartObject, which is
+                            great for checking properties conditional formatting is bound to.<br>
+                            <img src="images/SmartObjectSpans.jpg" alt="Images of Smart Objects">
+                        </li>
+                        <li>If you click a Control, you will be shown the rules where this control is referenced.</li>
+                    </ol>
+                <li>Rules – A keyboard navigable list of the form or view’s rules.</li>
+                <ol>
+                    <li style="font-style: italic">The most important thing to know about the debugger is this tab
+                        represents a translation of the internal XML rules back into human readable rules. It may not be
+                        a perfect translation but it will be close enough to remind you of the actual rule.</li>
+                    <li>The XML Runtime rules are not as extensive as the rules as design time. For instance they don’t
+                        contain the names of controls referred to on subforms, expression names or details about views
+                        opened by buttons.</li>
+                </ol>
+                <li>Events – A runtime list of the events and actions as they are executed. When you see the output,
+                    you’ll know why some of those forms were so hard to debug!</li>
+                <ol>
+                    <li>Click an event to see the definition of that event.</li>
+                    <li>Right click actions, such as “then execute”, or controls and select Defintion… to navigate to
+                        the definition.</li>
+                    <li>The SmartObject execution can be expanded to show the parameters used in the SmartObject call.
+                    </li>
+                    <li>There are check boxes in the rules to enable a “breakpoint” of sorts at that action. This
+                        functionality is still in the works.</li>
+                </ol>
+                <li>Settings</li>
+                <ol>
+                    <li>
+                        Check your license details.
+                    </li>
+                    <li>Show GUIDs. Turn on to show guids in the data explorer.</li>
+                    <li>Copy the Support email address.</li>
+                </ol>
+                <li>Information – This tab.</li>
+            </ol>
+            <p>Additional Notes:</p>
+            <ol>
+                <li>
+                    The first time the Assistant runs, it starts K2’s Designer, if the designer isn’t already running it may take a while to respond and you will see a flashing indicator light for "Get SmartObject Details".
+                    <br>
+                    <img src="images/SmOProcessing.png" alt="Image showing Smart Object Processing status">
+                </li>
+                <li>Unfortunately the SmartObject method names in XML are encrypted for most K2 installations, including the cloud and cannot be displayed.</li>
+                <li>The goal was for the debugger be able to run without any modification to a form but the debugger can’t load before Initialize unless a user message is added to the init event. This gives the debugger time to load the controllers and rules. I add these actions, which allows the Assistant to load and capture events after you close the message.
+                    <br>
+                    <img src="images/DebugInit.jpg" alt="Image showing Rules for Init">
+                </li>
+                <li>I have tested this on a good range of forms, but not every form and as this is reverse engineering there map be gaps in the mapping.</li>
+                <ol>
+                    <li>In the event your rules or forms break the debugger, it would be very helpful to get a copy of the controller and rule XML. The functionality to send those easily, is in development now.</li>
+                </ol>
+                <li>The core engine which translates the rules, runs in an NodeJS environment. This means your rules (not the form layout) are sent to be de-compiled. They are not stored or recorded in any fashion, unless you explicitly send them via item 4.</li>
+                <ol><li>You may experience a “cold start” delay of a few seconds the first time the debugger processes your rules.</li></ol>
+                <li>Right clicking items within the output will let you view References or Definitions.</li>
+                <li>I’d love to hear about your experience with the degbugger. Please email support if you have any ideas or comments, issues are welcome.</li>
+            </ol>
+            <p>I hope you enjoy the Assistant!</p>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
